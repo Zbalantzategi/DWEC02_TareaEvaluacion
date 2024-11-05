@@ -88,7 +88,7 @@ function guardarGasto(event) {
             let precioViaje = precioKM * kilometros;
 
             const nuevoViaje = new gastosCombustible(tipoVehiculo, fecha, kilometros, precioViaje);
-            document.getElementById('expense-list').innerText = nuevoViaje.convertToJSON();
+            document.getElementById('expense-list').innerText += nuevoViaje.convertToJSON();
     
             let gastoActual = parseFloat(document.getElementById('gasto' + anioViaje).innerText);
             let gastoTotal = Math.round((gastoActual + precioViaje)*100) / 100;
